@@ -122,7 +122,7 @@ func openClient() {
 
 func openPresence() {
 	// try until success
-	for range time.Tick(500 * time.Millisecond) {
+	for range time.Tick(15 * time.Second) {
 		if client.IsClosed() {
 			return // stop trying when mpv shuts down
 		}
